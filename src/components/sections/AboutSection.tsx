@@ -24,26 +24,26 @@ export function AboutSection() {
           className="text-muted-foreground space-y-4 text-sm leading-relaxed"
         >
           <p>
-            Hello! I'm Victor, a software engineer and technical writer based in Lagos, Nigeria. I
+            Hello! I'm Victor, a software engineer and technical writer based in Nigeria. I
             enjoy building things that live on the internet — from intelligent backend systems to
             well-crafted technical articles that make complex ideas accessible.
           </p>
           <p>
             My journey into tech started with a curiosity about how machines learn and make decisions.
             That curiosity led me down the path of AI/ML engineering, where I've had the privilege of
-            working on recommendation systems, natural language processing pipelines, and API
-            architectures that serve thousands of users.
+            working on recommendation systems, natural language processing pipelines, retrieval augmented generation systems,
+            and API architectures that serve thousands of users.
           </p>
           <p>
             Today, I split my time between writing production code, publishing technical content for
-            developer communities, and mentoring early-career engineers through the often-confusing
+            developer communities, and mentoring early-career techies through the often-confusing
             landscape of tech careers.
           </p>
           <p className="text-muted-foreground">
             Here are a few technologies I've been working with recently:
           </p>
           <ul className="grid grid-cols-2 gap-x-4 gap-y-2 font-mono text-xs">
-            {["Python", "FastAPI", "TypeScript", "PostgreSQL", "LangChain", "Docker"].map((tech) => (
+            {["Python", "JavaScript", "Markdown/Markdown React", "Mintlify", "FastAPI", "Flask", "Node.js", "TypeScript", "PostgreSQL", "LangChain", "MongoDB"].map((tech) => (
               <li key={tech} className="flex items-center gap-2">
                 <span className="text-primary">▹</span> {tech}
               </li>

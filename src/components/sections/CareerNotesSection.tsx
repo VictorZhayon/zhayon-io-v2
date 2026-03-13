@@ -3,9 +3,9 @@ import { ArrowUpRight } from "lucide-react";
 
 const posts = [
   {
-    title: "How I Broke Into Tech Without a CS Degree",
-    excerpt: "My unconventional path into software engineering — and the strategies that actually worked.",
-    link: "#",
+    title: "Tech is Not for Everybody",
+    excerpt: "... and that's perfectly fine.",
+    link: "https://medium.com/@victorzion1/tech-is-not-for-everybody-349a05f675a9",
   },
   {
     title: "The Technical Writing Side Quest That Changed My Career",

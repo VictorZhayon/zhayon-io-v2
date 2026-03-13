@@ -5,17 +5,17 @@ const experiences = [
   {
     company: "Hackmamba",
     title: "Technical Writer",
-    period: "Jan 2023 — Present",
+    period: "Oct 2025 — Present",
     bullets: [
-      "Author in-depth technical articles on AI/ML, backend engineering, and developer tools for a global developer audience.",
-      "Collaborate with engineering teams to translate complex product features into clear, actionable documentation.",
+      "Migrated existing documenation sites (nTop, CoinBase, FrankieOne) to Mintlify, improving content discoverability and user engagement.",
+      "Collaborate with other documentation migration team mates to translate complex features into clear, actionable documentation.",
       "Contributed to a 40% increase in organic traffic through SEO-optimized technical content.",
     ],
   },
   {
-    company: "Company B",
-    title: "Backend Engineer",
-    period: "Jun 2021 — Dec 2022",
+    company: "Morlabs Protocol",
+    title: "LLM Engineer/Lead Technical Researcher",
+    period: "Mar 2025 — Present",
     bullets: [
       "Designed and maintained RESTful APIs serving 50,000+ daily active users using FastAPI and PostgreSQL.",
       "Implemented CI/CD pipelines and containerized services with Docker, reducing deployment times by 60%.",
@@ -23,9 +23,9 @@ const experiences = [
     ],
   },
   {
-    company: "Company A",
-    title: "AI/ML Engineer",
-    period: "Mar 2020 — May 2021",
+    company: "Demz Aminitics",
+    title: "LLM Engineer",
+    period: "Jan 2025 — Apr 2025",
     bullets: [
       "Built and deployed NLP models for sentiment analysis and text classification using PyTorch and Hugging Face Transformers.",
       "Developed data pipelines for ingesting and preprocessing large-scale datasets with Apache Airflow.",

@@ -26,7 +26,7 @@ export function FooterSection() {
         ))}
       </div>
       <a
-        href="https://github.com"
+        href="https://github.com/VictorZhayon"
         target="_blank"
         rel="noopener noreferrer"
         className="font-mono text-xs text-muted-foreground hover:text-primary transition-colors duration-200 block"
