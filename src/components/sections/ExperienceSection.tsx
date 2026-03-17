@@ -3,6 +3,16 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
+    company: "GemNexus",
+    title: "Chief Technology Officer",
+    period: "Dec 2025 — Present",
+    bullets: [
+      "Technology Strategy & Vision — Defining and driving the technical direction of GemNexus, including decisions around the tools, platforms, and infrastructure that power your training programs and digital products.",
+      "Product Development & Oversight — Leading the build and iteration of tech products, ensuring they align with GemNexus's mission. This includes overseeing development cycles, quality, and the roadmap for tools used in training and career advisory.",
+      "Tech Team Leadership & Capacity Building — Managing and mentoring the technical team, and since GemNexus is a digital literacy organization, also modeling and championing a culture of continuous learning and skills development — both internally and for the learners you serve.",
+    ],
+  },
+  {
     company: "Hackmamba",
     title: "Technical Writer",
     period: "Oct 2025 — Present",
@@ -10,6 +20,15 @@ const experiences = [
       "Migrated existing documenation sites (nTop, CoinBase, FrankieOne) to Mintlify, improving content discoverability and user engagement.",
       "Collaborate with other documentation migration team mates to translate complex features into clear, actionable documentation.",
       "Contributed to a 40% increase in organic traffic through SEO-optimized technical content.",
+    ],
+  },
+  {
+    company: "Elora",
+    title: "AI Engineer/ Technical Researcher",
+    period: "Aug 2025 — Present",
+    bullets: [
+      "Wrote extensive and elaborate documentations to describe workflow and system.",
+      "Led research in the application of AI in Healthcare, particularly skincare.",
     ],
   },
   {
