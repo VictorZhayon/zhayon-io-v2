@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, BookOpen, Menu, X, WhatsApp} from "lucide-react";
+import { Github, Linkedin, Twitter, BookOpen, Menu, X} from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
@@ -14,7 +14,6 @@ const socialLinks = [
   { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
   { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
   { icon: BookOpen, href: "https://medium.com/@victorzion1", label: "Medium" },
-  { icon: WhatsApp, href: "https://wa.link/xge0dd", label: "WhatsApp" },
 ];
 
 export function FixedSidebar() {
