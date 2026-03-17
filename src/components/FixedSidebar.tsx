@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, BookOpen, Menu, X } from "lucide-react";
+import { Github, Linkedin, Twitter, BookOpen, Menu, X, WhatsApp} from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
@@ -10,10 +10,11 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
+  { icon: Github, href: "https://github.com/VictorZhayon", label: "GitHub" },
   { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
   { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: BookOpen, href: "https://medium.com", label: "Medium" },
+  { icon: BookOpen, href: "https://medium.com/@victorzion1", label: "Medium" },
+  { icon: WhatsApp, href: "https://wa.link/xge0dd", label: "WhatsApp" },
 ];
 
 export function FixedSidebar() {
@@ -72,7 +73,7 @@ export function FixedSidebar() {
             </h1>
           </a>
           <p className="text-foreground text-lg font-medium mt-2">
-            Software Engineer
+            Software Engineer | Technical Writer
           </p>
           <p className="text-muted-foreground text-sm mt-1 max-w-[280px]">
             I build intelligent systems and write about technology with clarity and intent.
