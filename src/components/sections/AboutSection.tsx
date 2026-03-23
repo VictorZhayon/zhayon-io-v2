@@ -23,7 +23,7 @@ export function AboutSection() {
           transition={{ duration: 0.4, delay: 0.1 }}
           className="text-muted-foreground space-y-4 text-sm leading-relaxed"
         >
-          <p>
+          <p className="text-primary">
             Hello! I'm Victor, a software engineer and technical writer based in Nigeria. I
             enjoy building things that live on the internet — from intelligent backend systems to
             well-crafted technical articles that make complex ideas accessible.
