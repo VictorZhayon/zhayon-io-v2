@@ -1,18 +1,22 @@
-import { Github, Linkedin, Twitter, BookOpen, Menu, X} from "lucide-react";
+import { Github, BookOpen, Menu, X as XIcon } from "lucide-react";
 import { useState } from "react";
+
+const XTwitterIcon = ({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 const navLinks = [
   { label: "About", href: "#about", num: "01" },
   { label: "Experience", href: "#experience", num: "02" },
   { label: "Projects", href: "#projects", num: "03" },
-  { label: "Writing", href: "#writing", num: "04" },
-  { label: "Contact", href: "#contact", num: "05" },
+  { label: "Contact", href: "#contact", num: "04" },
 ];
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/VictorZhayon", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+  { icon: Github, href: "https://www.github.com/VictorZhayon", label: "GitHub" },
+  { icon: XTwitterIcon, href: "https://www.x.com/zhayon_io", label: "X" },
   { icon: BookOpen, href: "https://medium.com/@victorzion1", label: "Medium" },
 ];
 
@@ -37,7 +41,7 @@ export function FixedSidebar() {
           className="text-foreground hover:text-primary transition-colors"
           aria-label="Toggle menu"
         >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileOpen ? <XIcon size={24} /> : <Menu size={24} />}
         </button>
       </header>
 
