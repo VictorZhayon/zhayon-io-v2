@@ -41,8 +41,8 @@ export function ContactSection() {
         <a
           href="mailto:victorzion1@gmail.com"
           className="inline-block border border-primary text-primary px-8 py-4 rounded font-mono text-sm hover:bg-primary/10 transition-colors duration-200">
-          
-          Say Hello
+
+
         </a>
       </motion.div>
     </section>);
