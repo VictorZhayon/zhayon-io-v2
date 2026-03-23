@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, BookOpen, Menu, X} from "lucide-react";
+import { Github, BookOpen, Menu, X as XIcon } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
