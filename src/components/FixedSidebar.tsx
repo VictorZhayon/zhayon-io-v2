@@ -1,24 +1,24 @@
 import { Github, BookOpen, Menu, X as XIcon } from "lucide-react";
 import { useState } from "react";
 
-const XTwitterIcon = ({ size = 20 }: { size?: number }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+const XTwitterIcon = ({ size = 20 }: {size?: number;}) =>
+<svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-  </svg>
-);
+  </svg>;
+
 
 const navLinks = [
-  { label: "About", href: "#about", num: "01" },
-  { label: "Experience", href: "#experience", num: "02" },
-  { label: "Projects", href: "#projects", num: "03" },
-  { label: "Contact", href: "#contact", num: "04" },
-];
+{ label: "About", href: "#about", num: "01" },
+{ label: "Experience", href: "#experience", num: "02" },
+{ label: "Projects", href: "#projects", num: "03" },
+{ label: "Contact", href: "#contact", num: "04" }];
+
 
 const socialLinks = [
-  { icon: Github, href: "https://www.github.com/VictorZhayon", label: "GitHub" },
-  { icon: XTwitterIcon, href: "https://www.x.com/zhayon_io", label: "X" },
-  { icon: BookOpen, href: "https://medium.com/@victorzion1", label: "Medium" },
-];
+{ icon: Github, href: "https://www.github.com/VictorZhayon", label: "GitHub" },
+{ icon: XTwitterIcon, href: "https://www.x.com/zhayon_io", label: "X" },
+{ icon: BookOpen, href: "https://medium.com/@victorzion1", label: "Medium" }];
+
 
 export function FixedSidebar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -39,39 +39,39 @@ export function FixedSidebar() {
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="text-foreground hover:text-primary transition-colors"
-          aria-label="Toggle menu"
-        >
+          aria-label="Toggle menu">
+          
           {mobileOpen ? <XIcon size={24} /> : <Menu size={24} />}
         </button>
       </header>
 
       {/* Mobile menu overlay */}
-      {mobileOpen && (
-        <div className="lg:hidden fixed inset-0 z-40 bg-background/95 backdrop-blur-md flex flex-col items-center justify-center gap-6">
-          {navLinks.map((link) => (
-            <button
-              key={link.href}
-              onClick={() => handleNavClick(link.href)}
-              className="text-foreground hover:text-primary transition-colors text-lg"
-            >
+      {mobileOpen &&
+      <div className="lg:hidden fixed inset-0 z-40 bg-background/95 backdrop-blur-md flex flex-col items-center justify-center gap-6">
+          {navLinks.map((link) =>
+        <button
+          key={link.href}
+          onClick={() => handleNavClick(link.href)}
+          className="text-foreground hover:text-primary transition-colors text-lg">
+          
               <span className="font-mono text-primary text-sm mr-2">{link.num}.</span>
               {link.label}
             </button>
-          ))}
+        )}
           <a
-            href="/resume.pdf"
-            className="mt-4 border border-primary text-primary px-6 py-2 rounded font-mono text-sm hover:bg-primary/10 transition-colors"
-          >
+          href="/resume.pdf"
+          className="mt-4 border border-primary text-primary px-6 py-2 rounded font-mono text-sm hover:bg-primary/10 transition-colors">
+          
             Resume
           </a>
         </div>
-      )}
+      }
 
       {/* Desktop fixed sidebar */}
       <aside className="hidden lg:flex fixed left-0 top-0 bottom-0 w-[35%] max-w-[480px] flex-col justify-between p-12 xl:p-16 z-30">
         <div>
           <a href="#" className="block mb-2">
-            <h1 className="text-foreground text-4xl xl:text-5xl font-bold tracking-tight">
+            <h1 className="text-foreground text-4xl font-bold tracking-tight xl:text-6xl">
               Victor Zion
             </h1>
           </a>
@@ -83,36 +83,36 @@ export function FixedSidebar() {
           </p>
 
           <nav className="mt-12 flex flex-col gap-3">
-            {navLinks.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => handleNavClick(link.href)}
-                className="group flex items-center gap-3 text-muted-foreground hover:text-foreground transition-all duration-200 text-sm"
-              >
+            {navLinks.map((link) =>
+            <button
+              key={link.href}
+              onClick={() => handleNavClick(link.href)}
+              className="group flex items-center gap-3 text-muted-foreground hover:text-foreground transition-all duration-200 text-sm">
+              
                 <span className="h-px w-6 bg-muted-foreground group-hover:w-12 group-hover:bg-foreground transition-all duration-200" />
                 <span className="uppercase tracking-widest text-xs font-medium">
                   {link.label}
                 </span>
               </button>
-            ))}
+            )}
           </nav>
         </div>
 
         <div className="flex items-center gap-5">
-          {socialLinks.map((social) => (
-            <a
-              key={social.label}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:-translate-y-0.5"
-              aria-label={social.label}
-            >
+          {socialLinks.map((social) =>
+          <a
+            key={social.label}
+            href={social.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:-translate-y-0.5"
+            aria-label={social.label}>
+            
               <social.icon size={20} />
             </a>
-          ))}
+          )}
         </div>
       </aside>
-    </>
-  );
+    </>);
+
 }
