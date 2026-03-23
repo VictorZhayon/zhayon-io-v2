@@ -14,11 +14,11 @@ const experiences = [
   },
   {
     company: "Hackmamba",
-    title: "Technical Writer",
+    title: "Documentation Engineer",
     period: "Oct 2025 — Present",
     bullets: [
-      "Migrated existing documenation sites (nTop, CoinBase, FrankieOne) to Mintlify, improving content discoverability and user engagement.",
-      "Collaborate with other documentation migration team mates to translate complex features into clear, actionable documentation.",
+      "Migrated existing documenation sites (nTop, CoinBase, FrankieOne, etc.) to Mintlify, improving content discoverability and user engagement.",
+      "Collaborate with other documentation migration teammates to translate complex features into clear, actionable documentation.",
       "Contributed to a 40% increase in organic traffic through SEO-optimized technical content.",
     ],
   },
@@ -29,6 +29,7 @@ const experiences = [
     bullets: [
       "Wrote extensive and elaborate documentations to describe workflow and system.",
       "Led research in the application of AI in Healthcare, particularly skincare.",
+      "Collaborated with cross-functional teams to integrate AI solutions into product offerings, resulting in a 25% improvement in user engagement.",
     ],
   },
   {
@@ -36,9 +37,9 @@ const experiences = [
     title: "LLM Engineer/Lead Technical Researcher",
     period: "Mar 2025 — Present",
     bullets: [
-      "Designed and maintained RESTful APIs serving 50,000+ daily active users using FastAPI and PostgreSQL.",
-      "Implemented CI/CD pipelines and containerized services with Docker, reducing deployment times by 60%.",
-      "Led database schema migrations and query optimization efforts, improving average response times by 35%.",
+      "Led the research of useful and relevant APIs/SDKs in the Solana ecosystem, and implemented them in the development of a Solana-based LLM-powered chatbot.",
+      "Collaborated with the Backend and DevOps teams to design and implement scalable backend services using Python and FastAPI, resulting in a 30% reduction in latency.",
+      "Built and deployed LLM-based solutions for various use cases, including documentation guide and code generation, using LangChain.",
     ],
   },
   {
@@ -46,9 +47,19 @@ const experiences = [
     title: "LLM Engineer",
     period: "Jan 2025 — Apr 2025",
     bullets: [
-      "Built and deployed NLP models for sentiment analysis and text classification using PyTorch and Hugging Face Transformers.",
-      "Developed data pipelines for ingesting and preprocessing large-scale datasets with Apache Airflow.",
-      "Collaborated with product teams to integrate ML-powered recommendations into the core platform.",
+      "Built and deployed an AI-powered Markdown documentation generator using OpenAI's o3-mini, resulting in a 50% reduction in documentation time for internal projects.",
+      "Developed an AI-powered Screen Recorder that automatically generates video summaries, action points, and highlights, using faster-whisper and OpenAI's o3-mini, improving team productivity by 30%.",
+      "Collaborated with the backend team to deploy AI solutions on AWS, ensuring scalability and reliability of the applications.",
+    ],
+  },
+  {
+    company: "Wedigraf Technologies",
+    title: "Flutter Developer - Intern",
+    period: "Jan 2023 — Jun 2023",
+    bullets: [
+      "Co-led a team of 5 in developing a cross-platform mobile application using Flutter",
+      "Learnt Flutter and Dart from scratch, and successfully implemented key features such as user authentication, real-time chat, and push notifications.",
+      "Implemented a responsive UI that adapts to various screen sizes, resulting in a 20% increase in user engagement.",
     ],
   },
 ];

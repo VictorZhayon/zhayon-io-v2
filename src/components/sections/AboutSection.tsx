@@ -43,7 +43,7 @@ export function AboutSection() {
             Here are a few technologies I've been working with recently:
           </p>
           <ul className="grid grid-cols-2 gap-x-4 gap-y-2 font-mono text-xs">
-            {["Python", "JavaScript", "Markdown/Markdown React", "Mintlify", "FastAPI", "Flask", "Node.js", "TypeScript", "PostgreSQL", "LangChain", "MongoDB"].map((tech) => (
+            {["Python", "JavaScript", "Markdown/Markdown React", "Mintlify", "FastAPI", "Flask", "Node.js", "TypeScript", "MongoDB"].map((tech) => (
               <li key={tech} className="flex items-center gap-2">
                 <span className="text-primary">▹</span> {tech}
               </li>
