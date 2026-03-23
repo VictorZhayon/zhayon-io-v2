@@ -10,8 +10,8 @@ export function AboutSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
         className="section-heading"
-        data-num="01."
-      >
+        data-num="01.">
+        
         About Me
       </motion.h3>
 
@@ -21,9 +21,9 @@ export function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.1 }}
-          className="text-muted-foreground space-y-4 text-sm leading-relaxed"
-        >
-          <p className="text-primary">
+          className="text-muted-foreground space-y-4 text-sm leading-relaxed">
+          
+          <p className="text-muted-foreground">
             Hello! I'm Victor, a software engineer and technical writer based in Nigeria. I
             enjoy building things that live on the internet — from intelligent backend systems to
             well-crafted technical articles that make complex ideas accessible.
@@ -43,11 +43,11 @@ export function AboutSection() {
             Here are a few technologies I've been working with recently:
           </p>
           <ul className="grid grid-cols-2 gap-x-4 gap-y-2 font-mono text-xs">
-            {["Python", "JavaScript", "Markdown/Markdown React", "Mintlify", "FastAPI", "Flask", "Node.js", "TypeScript", "MongoDB"].map((tech) => (
-              <li key={tech} className="flex items-center gap-2">
+            {["Python", "JavaScript", "Markdown/Markdown React", "Mintlify", "FastAPI", "Flask", "Node.js", "TypeScript", "MongoDB"].map((tech) =>
+            <li key={tech} className="flex items-center gap-2">
                 <span className="text-primary">▹</span> {tech}
               </li>
-            ))}
+            )}
           </ul>
         </motion.div>
 
@@ -56,21 +56,21 @@ export function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.2 }}
-          className="relative group mx-auto md:mx-0"
-        >
+          className="relative group mx-auto md:mx-0">
+          
           <div className="relative w-60 h-60 xl:w-72 xl:h-72">
             <div className="absolute inset-0 rounded border-2 border-primary translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-200 z-0" />
             <div className="relative z-10 rounded overflow-hidden">
               <img
                 src={profileImg}
                 alt="Victor Zion"
-                className="w-full h-full object-cover rounded"
-              />
+                className="w-full h-full object-cover rounded" />
+              
               <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-200 rounded" />
             </div>
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
