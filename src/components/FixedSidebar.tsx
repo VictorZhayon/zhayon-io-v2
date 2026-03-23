@@ -41,7 +41,7 @@ export function FixedSidebar() {
           className="text-foreground hover:text-primary transition-colors"
           aria-label="Toggle menu"
         >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileOpen ? <XIcon size={24} /> : <Menu size={24} />}
         </button>
       </header>
 
