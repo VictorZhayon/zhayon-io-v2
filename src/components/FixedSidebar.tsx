@@ -15,9 +15,8 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/VictorZhayon", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+  { icon: Github, href: "https://www.github.com/VictorZhayon", label: "GitHub" },
+  { icon: XTwitterIcon, href: "https://www.x.com/zhayon_io", label: "X" },
   { icon: BookOpen, href: "https://medium.com/@victorzion1", label: "Medium" },
 ];
 
