@@ -6,6 +6,7 @@ const experiences = [
     company: "GemNexus",
     title: "Chief Technology Officer",
     period: "Dec 2025 — Present",
+    tech: ["Python", "React", "AWS", "PostgreSQL"],
     bullets: [
       "Technology Strategy & Vision — Defining and driving the technical direction of GemNexus, including decisions around the tools, platforms, and infrastructure that power your training programs and digital products.",
       "Product Development & Oversight — Leading the build and iteration of tech products, ensuring they align with GemNexus's mission. This includes overseeing development cycles, quality, and the roadmap for tools used in training and career advisory.",
@@ -16,6 +17,7 @@ const experiences = [
     company: "Hackmamba",
     title: "Documentation Engineer",
     period: "Oct 2025 — Present",
+    tech: ["Mintlify", "Markdown", "SEO", "Git"],
     bullets: [
       "Migrated existing documenation sites (nTop, CoinBase, FrankieOne, etc.) to Mintlify, improving content discoverability and user engagement.",
       "Collaborate with other documentation migration teammates to translate complex features into clear, actionable documentation.",
@@ -26,6 +28,7 @@ const experiences = [
     company: "Elora",
     title: "AI Engineer/ Technical Researcher",
     period: "Aug 2025 — Present",
+    tech: ["Python", "TensorFlow", "FastAPI", "Docker"],
     bullets: [
       "Wrote extensive and elaborate documentations to describe workflow and system.",
       "Led research in the application of AI in Healthcare, particularly skincare.",
@@ -36,6 +39,7 @@ const experiences = [
     company: "Morlabs Protocol",
     title: "LLM Engineer/Lead Technical Researcher",
     period: "Mar 2025 — Present",
+    tech: ["LangChain", "Python", "FastAPI", "Solana"],
     bullets: [
       "Led the research of useful and relevant APIs/SDKs in the Solana ecosystem, and implemented them in the development of a Solana-based LLM-powered chatbot.",
       "Collaborated with the Backend and DevOps teams to design and implement scalable backend services using Python and FastAPI, resulting in a 30% reduction in latency.",
@@ -46,6 +50,7 @@ const experiences = [
     company: "Demz Aminitics",
     title: "LLM Engineer",
     period: "Jan 2025 — Apr 2025",
+    tech: ["OpenAI", "Python", "AWS", "Whisper"],
     bullets: [
       "Built and deployed an AI-powered Markdown documentation generator using OpenAI's o3-mini, resulting in a 50% reduction in documentation time for internal projects.",
       "Developed an AI-powered Screen Recorder that automatically generates video summaries, action points, and highlights, using faster-whisper and OpenAI's o3-mini, improving team productivity by 30%.",
@@ -56,6 +61,7 @@ const experiences = [
     company: "Wedigraf Technologies",
     title: "Flutter Developer - Intern",
     period: "Jan 2023 — Jun 2023",
+    tech: ["Flutter", "Dart", "Firebase", "REST APIs"],
     bullets: [
       "Co-led a team of 5 in developing a cross-platform mobile application using Flutter",
       "Learnt Flutter and Dart from scratch, and successfully implemented key features such as user authentication, real-time chat, and push notifications.",
