@@ -36,12 +36,12 @@ export function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.4 }}>
         
-        <button
-          onClick={handleScroll}
-          className="border border-primary text-primary px-7 py-4 rounded font-mono text-sm hover:bg-primary/10 transition-colors duration-200">
-          
-          See my work
-        </button>
+        <a
+          href="/victor-zion-cv.pdf"
+          download
+          className="border border-primary text-primary px-7 py-4 rounded font-mono text-sm hover:bg-primary/10 transition-colors duration-200 inline-block">
+          Download My CV
+        </a>
       </motion.div>
     </section>);
 

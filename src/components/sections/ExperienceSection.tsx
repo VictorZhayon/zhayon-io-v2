@@ -120,6 +120,13 @@ export function ExperienceSection() {
           <p className="font-mono text-muted-foreground text-xs mt-1 mb-6">
             {current.period}
           </p>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {current.tech.map((t) => (
+              <span key={t} className="font-mono text-xs text-primary bg-primary/10 px-2.5 py-1 rounded">
+                {t}
+              </span>
+            ))}
+          </div>
           <ul className="space-y-3">
             {current.bullets.map((bullet, i) => (
               <li key={i} className="flex gap-3 text-muted-foreground text-sm leading-relaxed">
