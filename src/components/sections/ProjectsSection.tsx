@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github, Folder } from "lucide-react";
 
 const featuredProject = {
-  title: "IntelliSearch AI",
+  title: "techDNA",
   description:
-    "A semantic search engine powered by vector embeddings and LLMs. Users can query a knowledge base in natural language and receive contextually accurate results with source attribution.",
-  tech: ["Python", "FastAPI", "LangChain", "Pinecone", "React"],
-  github: "https://github.com",
-  live: "https://example.com",
+    "An AI-powered career discovery quiz that reveals where you naturally belong in tech — no experience needed. A follow-up consultation is given by the Tech Shepra - Victor Zion.",
+  tech: ["HTML", "CSS", "Vanilla JS", "Email JS", "Google Gemini"],
+  github: "https://github.com/VictorZhayon/tech_dna",
+  live: "https://tech-dna.netlify.app/",
 };
 
 const projects = [
@@ -20,12 +20,12 @@ const projects = [
     live: "https://poem-ai-agent.streamlit.app/",
   },
   {
-    title: "FinTrack API",
+    title: "Redocly",
     description:
-      "RESTful API for personal finance tracking with automated categorization of transactions using a fine-tuned classification model.",
-    tech: ["FastAPI", "PostgreSQL", "scikit-learn"],
-    github: "https://github.com",
-    live: "https://example.com",
+      "This is the Redocly documentation site — a Mintlify-hosted developer docs page for Redoc, an open-source tool that generates clean, three-panel web documentation from OpenAPI/Swagger description files.",
+    tech: ["React", "Mintlify", "Markdown", "JSON"],
+    github: "https://github.com/VictorZhayon/migration-docs",
+    live: "https://demo-3d453564.mintlify.app/",
   },
   {
     title: "CareerMap",
