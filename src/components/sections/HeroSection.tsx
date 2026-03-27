@@ -32,13 +32,13 @@ export function HeroSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.2 }}
-        className="text-foreground text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 h-[1.3em] sm:h-[1.3em] lg:h-[1.3em] relative overflow-hidden">
+        className="text-foreground text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8 min-h-[2.6em] sm:min-h-[2.6em] lg:min-h-[1.4em] relative overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.span
             key={index}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
+            initial={{ opacity: 0, x: 80 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -80 }}
             transition={{ duration: 0.5 }}
             className="absolute inset-0"
           >
