@@ -15,7 +15,7 @@ export function HeroSection() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((i) => (i + 1) % headlines.length);
-    }, 5000);
+    }, 7000);
     return () => clearInterval(timer);
   }, []);
 
