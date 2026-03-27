@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 
 const headlines = [
   "Engineer who writes. Writer who ships.",
-  "I build systems. I document them. Both, well.",
   "I speak fluently in code and in prose.",
   "I build what works. I write what lasts.",
   "Half engineer, half writer. Fully useful.",
