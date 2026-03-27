@@ -21,7 +21,7 @@ export function HeroSection() {
         transition={{ duration: 0.4, delay: 0.2 }}
         className="text-foreground text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4">
         
-        I write and build intelligent systems with clarity and intent.
+        {"\n"}
       </motion.h2>
       <motion.p
         initial={{ opacity: 0, y: 20 }}
