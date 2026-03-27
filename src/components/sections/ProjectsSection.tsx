@@ -12,12 +12,12 @@ const featuredProject = {
 
 const projects = [
   {
-    title: "DevPulse CLI",
+    title: "PristineQuill",
     description:
-      "A command-line tool for monitoring GitHub repository health metrics, including PR velocity, issue resolution time, and contributor activity.",
-    tech: ["Python", "Click", "GitHub API"],
-    github: "https://github.com",
-    live: "",
+      "PristineQuill is an AI-powered poetry generation app created and designed to craft beautiful poems one stanza at a time.",
+    tech: ["Python", "Streamlit", "openai-sdk", "OpenRouter"],
+    github: "https://github.com/VictorZhayon/peom_ai_agent",
+    live: "https://poem-ai-agent.streamlit.app/",
   },
   {
     title: "FinTrack API",
