@@ -32,7 +32,7 @@ export function HeroSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.2 }}
-        className="text-foreground text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8 min-h-[2.6em] sm:min-h-[2.6em] lg:min-h-[1.4em] relative overflow-hidden">
+        className="text-foreground text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8 min-h-[3em] sm:min-h-[3em] lg:min-h-[1.6em] relative overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.span
             key={index}
