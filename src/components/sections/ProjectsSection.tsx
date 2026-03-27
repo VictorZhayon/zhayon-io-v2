@@ -28,12 +28,12 @@ const projects = [
     live: "https://demo-3d453564.mintlify.app/",
   },
   {
-    title: "CareerMap",
+    title: "Sage",
     description:
-      "An interactive roadmap generator for aspiring software engineers. Users select a career path and get a personalized learning plan.",
-    tech: ["TypeScript", "React", "Claude API"],
-    github: "https://github.com",
-    live: "https://example.com",
+      "Sage AI Assistant is a mystical document question-answering app powered by Gemini AI. Present your manuscripts (PDF, TXT, DOCX) and seek wisdom from their pages! Built to better understand how RAG systems work.",
+    tech: ["Python", "Streamlit", "Google Gemini API", "FAISS"],
+    github: "https://github.com/VictorZhayon/Sage",
+    live: "https://sage-ai-docs.streamlit.app/",
   },
 ];
 
