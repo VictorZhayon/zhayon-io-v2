@@ -58,39 +58,7 @@ export function ProjectsSection() {
         Projects
       </motion.h3>
 
-      {/* Featured */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.4, delay: 0.1 }}
-        className="mb-16"
-      >
-        <p className="font-mono text-primary text-xs mb-2">Featured Project</p>
-        <div className="bg-card rounded-lg p-6 sm:p-8 border border-border hover:border-primary/30 transition-colors duration-200">
-          <h4 className="text-foreground text-xl font-semibold mb-3">
-            {featuredProject.title}
-          </h4>
-          <p className="text-muted-foreground text-sm leading-relaxed mb-5 max-w-2xl">
-            {featuredProject.description}
-          </p>
-          <div className="flex flex-wrap gap-2 mb-5">
-            {featuredProject.tech.map((t) => (
-              <span key={t} className="font-mono text-xs text-primary bg-primary/10 px-3 py-1 rounded">
-                {t}
-              </span>
-            ))}
-          </div>
-          <div className="flex gap-4">
-            <a href={featuredProject.github} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
-              <Github size={20} />
-            </a>
-            <a href={featuredProject.live} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
-              <ExternalLink size={20} />
-            </a>
-          </div>
-        </div>
-      </motion.div>
+
 
       {/* Grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
