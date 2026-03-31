@@ -1,5 +1,5 @@
 import { Github, BookOpen, Menu, X as XIcon } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const XTwitterIcon = ({ size = 20 }: {size?: number;}) =>
 <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
@@ -22,6 +22,28 @@ const socialLinks = [
 
 export function FixedSidebar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const sectionIds = navLinks.map((l) => l.href.replace("#", ""));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((e) => e.isIntersecting);
+        if (visible.length > 0) {
+          const top = visible.reduce((a, b) =>
+            a.boundingClientRect.top < b.boundingClientRect.top ? a : b
+          );
+          setActiveSection(top.target.id);
+        }
+      },
+      { rootMargin: "-20% 0px -60% 0px", threshold: 0 }
+    );
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
 
   const handleNavClick = (href: string) => {
     setMobileOpen(false);
@@ -87,9 +109,17 @@ export function FixedSidebar() {
             <button
               key={link.href}
               onClick={() => handleNavClick(link.href)}
-              className="group flex items-center gap-3 text-muted-foreground hover:text-foreground transition-all duration-200 text-sm">
+              className={`group flex items-center gap-3 transition-all duration-200 text-sm ${
+                activeSection === link.href.replace("#", "")
+                  ? "text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}>
               
-                <span className="h-px w-6 bg-muted-foreground group-hover:w-12 group-hover:bg-foreground transition-all duration-200" />
+                <span className={`h-px transition-all duration-200 ${
+                  activeSection === link.href.replace("#", "")
+                    ? "w-12 bg-foreground"
+                    : "w-6 bg-muted-foreground group-hover:w-12 group-hover:bg-foreground"
+                }`} />
                 <span className="uppercase tracking-widest text-xs font-medium">
                   {link.label}
                 </span>
