@@ -1,5 +1,5 @@
 import { Github, BookOpen, Menu, X as XIcon } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const XTwitterIcon = ({ size = 20 }: {size?: number;}) =>
 <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
