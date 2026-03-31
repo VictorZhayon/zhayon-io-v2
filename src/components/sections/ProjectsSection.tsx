@@ -58,16 +58,19 @@ export function ProjectsSection() {
         Projects
       </motion.h3>
 
-      {/* Featured */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.4, delay: 0.1 }}
-        className="mb-16"
-      >
-        <p className="font-mono text-primary text-xs mb-2">Featured Project</p>
-        <div className="bg-card rounded-lg p-6 sm:p-8 border border-border hover:border-primary/30 transition-colors duration-200">
+
+
+      {/* Grid */}
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* Featured project taking 2 columns */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+          className="sm:col-span-2 bg-card rounded-lg p-6 sm:p-8 border border-border hover:border-primary/30 transition-colors duration-200 flex flex-col"
+        >
+          <p className="font-mono text-primary text-xs mb-2">Featured Project</p>
           <h4 className="text-foreground text-xl font-semibold mb-3">
             {featuredProject.title}
           </h4>
@@ -81,7 +84,7 @@ export function ProjectsSection() {
               </span>
             ))}
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-4 mt-auto">
             <a href={featuredProject.github} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
               <Github size={20} />
             </a>
@@ -89,11 +92,7 @@ export function ProjectsSection() {
               <ExternalLink size={20} />
             </a>
           </div>
-        </div>
-      </motion.div>
-
-      {/* Grid */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        </motion.div>
         {projects.map((project, i) => (
           <motion.div
             key={project.title}
