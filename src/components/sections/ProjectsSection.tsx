@@ -23,7 +23,7 @@ const projects = [
     title: "Redocly",
     description:
       "This is the Redocly documentation site — a Mintlify-hosted developer docs page for Redoc, an open-source tool that generates clean, three-panel web documentation from OpenAPI/Swagger description files.",
-    tech: ["React", "Mintlify", "Markdown", "JSON"],
+    tech: ["Markdown React\n", "Mintlify", "Markdown", "JSON"],
     github: "https://github.com/VictorZhayon/migration-docs",
     live: "https://demo-3d453564.mintlify.app/",
   },
