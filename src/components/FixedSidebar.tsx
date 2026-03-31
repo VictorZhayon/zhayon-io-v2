@@ -26,23 +26,20 @@ export function FixedSidebar() {
 
   useEffect(() => {
     const sectionIds = navLinks.map((l) => l.href.replace("#", ""));
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries.filter((e) => e.isIntersecting);
-        if (visible.length > 0) {
-          const top = visible.reduce((a, b) =>
-            a.boundingClientRect.top < b.boundingClientRect.top ? a : b
-          );
-          setActiveSection(top.target.id);
+    const handleScroll = () => {
+      const scrollY = window.scrollY + window.innerHeight * 0.3;
+      let current = "";
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= scrollY) {
+          current = id;
         }
-      },
-      { rootMargin: "-20% 0px -60% 0px", threshold: 0 }
-    );
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
+      }
+      setActiveSection(current);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleNavClick = (href: string) => {
@@ -111,13 +108,13 @@ export function FixedSidebar() {
               onClick={() => handleNavClick(link.href)}
               className={`group flex items-center gap-3 transition-all duration-200 text-sm ${
                 activeSection === link.href.replace("#", "")
-                  ? "text-foreground"
+                  ? "text-primary"
                   : "text-muted-foreground hover:text-foreground"
               }`}>
               
                 <span className={`h-px transition-all duration-200 ${
                   activeSection === link.href.replace("#", "")
-                    ? "w-12 bg-foreground"
+                    ? "w-12 bg-primary"
                     : "w-6 bg-muted-foreground group-hover:w-12 group-hover:bg-foreground"
                 }`} />
                 <span className="uppercase tracking-widest text-xs font-medium">

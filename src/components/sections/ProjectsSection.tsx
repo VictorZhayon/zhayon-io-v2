@@ -35,6 +35,13 @@ const projects = [
     github: "https://github.com/VictorZhayon/Sage",
     live: "https://sage-ai-docs.streamlit.app/",
   },
+  {
+    title: "LifeLens",
+    description:
+      "A PWA that helps you conduct structured life reviews across 9 areas with AI-powered insights, trend charts, and email reminders — backed by Firebase for persistent storage. Built by Victor for Victor.",
+    tech: ["React (Vite)", "Tailwind CSS", "Firebase Firestore", "Google Gemini API"],
+    github: "https://github.com/VictorZhayon/life_lens",
+  },
 ];
 
 export function ProjectsSection() {
