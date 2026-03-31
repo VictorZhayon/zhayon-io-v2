@@ -108,13 +108,13 @@ export function FixedSidebar() {
               onClick={() => handleNavClick(link.href)}
               className={`group flex items-center gap-3 transition-all duration-200 text-sm ${
                 activeSection === link.href.replace("#", "")
-                  ? "text-foreground"
+                  ? "text-primary"
                   : "text-muted-foreground hover:text-foreground"
               }`}>
               
                 <span className={`h-px transition-all duration-200 ${
                   activeSection === link.href.replace("#", "")
-                    ? "w-12 bg-foreground"
+                    ? "w-12 bg-primary"
                     : "w-6 bg-muted-foreground group-hover:w-12 group-hover:bg-foreground"
                 }`} />
                 <span className="uppercase tracking-widest text-xs font-medium">
