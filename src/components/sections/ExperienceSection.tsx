@@ -47,7 +47,7 @@ const experiences = [
     ],
   },
   {
-    company: "Demz Aminitics",
+    company: "Demz Aminytics",
     title: "LLM Engineer",
     period: "Jan 2025 — Apr 2025",
     tech: ["OpenAI", "Python", "AWS", "Whisper"],
