@@ -84,7 +84,7 @@ export function ExperienceSection() {
         className="section-heading"
         data-num="02."
       >
-        Experience
+        Where I've worked
       </motion.h3>
 
       <motion.div
