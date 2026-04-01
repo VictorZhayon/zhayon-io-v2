@@ -6,7 +6,7 @@ const experiences = [
     company: "GemNexus",
     title: "Chief Technology Officer",
     period: "Dec 2025 — Present",
-    tech: ["Python", "React", "AWS", "PostgreSQL"],
+    tech: ["Python", "JavaScript", "AWS", "PostgreSQL"],
     bullets: [
       "Technology Strategy & Vision — Defining and driving the technical direction of GemNexus, including decisions around the tools, platforms, and infrastructure that power your training programs and digital products.",
       "Product Development & Oversight — Leading the build and iteration of tech products, ensuring they align with GemNexus's mission. This includes overseeing development cycles, quality, and the roadmap for tools used in training and career advisory.",
