@@ -78,7 +78,7 @@ export function FixedSidebar() {
             </button>
         )}
           <a
-          href="/Victor-Zion-CV.pdf"
+          href="/Victor-Zion-CV-updated.pdf"
           className="mt-4 border border-primary text-primary px-6 py-2 rounded font-mono text-sm hover:bg-primary/10 transition-colors">
           
             Resume

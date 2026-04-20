@@ -36,17 +36,6 @@ const experiences = [
     ],
   },
   {
-    company: "Morlabs Protocol",
-    title: "LLM Engineer/Lead Technical Researcher",
-    period: "Mar 2025 — Present",
-    tech: ["LangChain", "Python", "FastAPI", "Solana"],
-    bullets: [
-      "Led the research of useful and relevant APIs/SDKs in the Solana ecosystem, and implemented them in the development of a Solana-based LLM-powered chatbot.",
-      "Collaborated with the Backend and DevOps teams to design and implement scalable backend services using Python and FastAPI, resulting in a 30% reduction in latency.",
-      "Built and deployed LLM-based solutions for various use cases, including documentation guide and code generation, using LangChain.",
-    ],
-  },
-  {
     company: "Demz Aminytics",
     title: "LLM Engineer",
     period: "Jan 2025 — Apr 2025",
