@@ -19,7 +19,7 @@ const experiences = [
     period: "Oct 2025 — Present",
     tech: ["Mintlify", "Markdown", "SEO", "Git"],
     bullets: [
-      "Migrated existing documenation sites (nTop, CoinBase, FrankieOne, etc.) to Mintlify, improving content discoverability and user engagement.",
+      "Migrated existing documentation sites (nTop, CoinBase, FrankieOne, etc.) to Mintlify, improving content discoverability and user engagement.",
       "Collaborate with other documentation migration teammates to translate complex features into clear, actionable documentation.",
       "Contributed to a 40% increase in organic traffic through SEO-optimized technical content.",
     ],

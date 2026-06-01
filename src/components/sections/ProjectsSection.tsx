@@ -4,10 +4,10 @@ import { ExternalLink, Github, Folder } from "lucide-react";
 const featuredProject = {
   title: "techDNA",
   description:
-    "An AI-powered career discovery quiz that reveals where you naturally belong in tech — no experience needed. A follow-up consultation is given by the Tech Shepra - Victor Zion.",
+    "An AI-powered career discovery quiz that reveals where you naturally belong in tech — no experience needed. A follow-up consultation is given by the Tech Sherpa - Victor Zion.",
   tech: ["HTML", "CSS", "Vanilla JS", "Email JS", "Google Gemini"],
   github: "https://github.com/VictorZhayon/tech_dna",
-  live: "https://tech-dna.netlify.app/",
+  live: "https://www.techdna.app",
 };
 
 const projects = [
