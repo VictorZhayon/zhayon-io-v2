@@ -8,7 +8,7 @@ export function ContactSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
-        className="font-mono text-primary text-sm mb-4">04. What's Next?
+        className="font-mono text-primary text-sm mb-4">05. What's Next?
 
 
       </motion.p>
