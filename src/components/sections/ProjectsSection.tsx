@@ -12,12 +12,19 @@ const featuredProject = {
 
 const projects = [
   {
-    title: "PristineQuill",
+    title: "Kavanah",
     description:
-      "PristineQuill is an AI-powered poetry generation app created and designed to craft beautiful poems one stanza at a time.",
-    tech: ["Python", "Streamlit", "openai-sdk", "OpenRouter"],
+      "A gospel music sight-reading learning app. Helps upcoming musicians build fluency in reading gospel notation through structured lessons and exercises.",
+    tech: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "Supabase"],
+    comingSoon: true,
+  },
+  {
+    title: "Volta",
+    description:
+      "Volta is a dark-themed poetry generation web app that streams AI-written poems token-by-token with live revision, analysis, and sharing tools.",
+    tech: ["FastAPI", "Python 3.12", "Vanilla JS", "Google Gemini (OpenAI-compatible API)", "Server-Sent Events", "SQLite", "slowapi", "Vercel"],
     github: "https://github.com/VictorZhayon/peom_ai_agent",
-    live: "https://poem-ai-agent.streamlit.app/",
+    live: "https://volta-dun.vercel.app",
   },
   {
     title: "Redocly",
@@ -26,6 +33,14 @@ const projects = [
     tech: ["Markdown React\n", "Mintlify", "Markdown", "JSON"],
     github: "https://github.com/VictorZhayon/migration-docs",
     live: "https://demo-3d453564.mintlify.app/",
+  },
+  {
+    title: "Anthropic Messages API Documentation",
+    description:
+      "A developer documentation site covering how to integrate Claude into applications via the Anthropic Messages API, including a tutorial, API reference, and AI coding tool guides. Created during the Creators' Growth program.",
+    tech: ["Mintlify", "MDX", "JSON"],
+    github: "https://github.com/VictorZhayon/victor-creator-growth",
+    live: "https://creatorsgrowth.mintlify.app/home",
   },
   {
     title: "Sage",
@@ -104,13 +119,18 @@ export function ProjectsSection() {
           >
             <div className="flex items-center justify-between mb-6">
               <Folder className="text-primary" size={36} strokeWidth={1} />
-              <div className="flex gap-3">
-                {project.github && (
+              <div className="flex items-center gap-3">
+                {project.comingSoon && (
+                  <span className="font-mono text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">
+                    Coming Soon
+                  </span>
+                )}
+                {!project.comingSoon && project.github && (
                   <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                     <Github size={18} />
                   </a>
                 )}
-                {project.live && (
+                {!project.comingSoon && project.live && (
                   <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                     <ExternalLink size={18} />
                   </a>
