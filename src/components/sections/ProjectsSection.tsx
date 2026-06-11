@@ -4,9 +4,9 @@ import { ExternalLink, Github, Folder } from "lucide-react";
 const featuredProject = {
   title: "techDNA",
   description:
-    "An AI-powered career discovery quiz that reveals where you naturally belong in tech — no experience needed. A follow-up consultation is given by the Tech Sherpa - Victor Zion.",
-  tech: ["HTML", "CSS", "Vanilla JS", "Email JS", "Google Gemini"],
-  github: "https://github.com/VictorZhayon/tech_dna",
+    "A career discovery web app that helps people find their natural fit in tech. Users complete a 10-question digital literacy assessment followed by a 40-question personality and aptitude quiz.",
+  tech: ["HTML", "CSS", "JavaScript", "Netlify Serverless Functions", "Google Gemini 2.5 Flash", "Supabase (PostgreSQL)", "Netlify"],
+  github: "https://github.com/VictorZhayon/tech_dna-pathfinder",
   live: "https://www.techdna.app",
 };
 
