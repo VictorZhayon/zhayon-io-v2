@@ -1,12 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-
-const headlines = [
-  "Engineer who writes. Writer who ships.",
-  "I speak fluently in code and in prose.",
-  "I build what works. I write what lasts.",
-  "Half engineer, half writer. Fully useful.",
-];
+import { Download } from "lucide-react";
+import { headlines } from "@/constants/data";
 
 export function HeroSection() {
   const [index, setIndex] = useState(0);
@@ -20,6 +15,8 @@ export function HeroSection() {
 
   return (
     <section className="min-h-screen flex flex-col justify-center py-20">
+      <h1 className="sr-only">Victor Zion — Software Engineer & Technical Writer</h1>
+
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -59,7 +56,8 @@ export function HeroSection() {
         <a
           href="/Victor-Zion-CV-updated.pdf"
           download
-          className="border border-primary text-primary px-7 py-4 rounded font-mono text-sm hover:bg-primary/10 transition-colors duration-200 inline-block">
+          className="inline-flex items-center gap-2 border border-primary text-primary px-7 py-4 rounded font-mono text-sm hover:bg-primary/10 transition-colors duration-200">
+          <Download size={15} />
           Download My CV
         </a>
       </motion.div>

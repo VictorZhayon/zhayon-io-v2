@@ -4,6 +4,9 @@ export function TechBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
@@ -33,7 +36,6 @@ export function TechBackground() {
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw connections
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -50,7 +52,6 @@ export function TechBackground() {
         }
       }
 
-      // Draw particles
       for (const p of particles) {
         ctx.beginPath();
         ctx.fillStyle = "rgba(100, 255, 218, 0.15)";

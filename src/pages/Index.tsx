@@ -1,8 +1,10 @@
 import { FixedSidebar } from "@/components/FixedSidebar";
 import { CursorGlow } from "@/components/CursorGlow";
 import { TechBackground } from "@/components/TechBackground";
+import { BackToTop } from "@/components/BackToTop";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
+import { StatsSection } from "@/components/sections/StatsSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { ClientWorkSection } from "@/components/sections/ClientWorkSection";
@@ -15,15 +17,17 @@ const Index = () => {
       <TechBackground />
       <CursorGlow />
       <FixedSidebar />
-      <main className="lg:ml-[35%] lg:max-w-[65%] px-6 sm:px-12 lg:px-16 xl:px-24 pt-20 lg:pt-0">
+      <main id="main-content" className="lg:ml-[35%] lg:max-w-[65%] px-6 sm:px-12 lg:px-16 xl:px-24 pt-20 lg:pt-0">
         <HeroSection />
         <AboutSection />
+        <StatsSection />
         <ExperienceSection />
         <ProjectsSection />
         <ClientWorkSection />
         <ContactSection />
         <FooterSection />
       </main>
+      <BackToTop />
     </div>
   );
 };

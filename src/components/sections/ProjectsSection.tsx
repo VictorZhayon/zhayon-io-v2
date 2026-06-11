@@ -1,63 +1,16 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github, Folder } from "lucide-react";
+import { featuredProject, projects } from "@/constants/data";
 
-const featuredProject = {
-  title: "techDNA",
-  description:
-    "A career discovery web app that helps people find their natural fit in tech. Users complete a 10-question digital literacy assessment followed by a 40-question personality and aptitude quiz.",
-  tech: ["HTML", "CSS", "JavaScript", "Netlify Serverless Functions", "Google Gemini 2.5 Flash", "Supabase (PostgreSQL)", "Netlify"],
-  github: "https://github.com/VictorZhayon/tech_dna-pathfinder",
-  live: "https://www.techdna.app",
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08 } },
 };
 
-const projects = [
-  {
-    title: "Kavanah",
-    description:
-      "A gospel music sight-reading learning app. Helps upcoming musicians build fluency in reading gospel notation through structured lessons and exercises.",
-    tech: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "Supabase"],
-    comingSoon: true,
-  },
-  {
-    title: "Volta",
-    description:
-      "Volta is a dark-themed poetry generation web app that streams AI-written poems token-by-token with live revision, analysis, and sharing tools.",
-    tech: ["FastAPI", "Python 3.12", "Vanilla JS", "Google Gemini (OpenAI-compatible API)", "Server-Sent Events", "SQLite", "slowapi", "Vercel"],
-    github: "https://github.com/VictorZhayon/peom_ai_agent",
-    live: "https://volta-dun.vercel.app",
-  },
-  {
-    title: "Redocly",
-    description:
-      "This is the Redocly documentation site — a Mintlify-hosted developer docs page for Redoc, an open-source tool that generates clean, three-panel web documentation from OpenAPI/Swagger description files.",
-    tech: ["Markdown React\n", "Mintlify", "Markdown", "JSON"],
-    github: "https://github.com/VictorZhayon/migration-docs",
-    live: "https://demo-3d453564.mintlify.app/",
-  },
-  {
-    title: "Anthropic Messages API Documentation",
-    description:
-      "A developer documentation site covering how to integrate Claude into applications via the Anthropic Messages API, including a tutorial, API reference, and AI coding tool guides. Created during the Creators' Growth program.",
-    tech: ["Mintlify", "MDX", "JSON"],
-    github: "https://github.com/VictorZhayon/victor-creator-growth",
-    live: "https://creatorsgrowth.mintlify.app/home",
-  },
-  {
-    title: "Sage",
-    description:
-      "Sage AI Assistant is a mystical document question-answering app powered by Gemini AI. Present your manuscripts (PDF, TXT, DOCX) and seek wisdom from their pages! Built to better understand how RAG systems work.",
-    tech: ["Python", "Streamlit", "Google Gemini API", "FAISS"],
-    github: "https://github.com/VictorZhayon/Sage",
-    live: "https://sage-ai-docs.streamlit.app/",
-  },
-  {
-    title: "LifeLens",
-    description:
-      "A PWA that helps you conduct structured life reviews across 9 areas with AI-powered insights, trend charts, and email reminders — backed by Firebase for persistent storage. Built by Victor for Victor.",
-    tech: ["React (Vite)", "Tailwind CSS", "Firebase Firestore", "Google Gemini API"],
-    github: "https://github.com/VictorZhayon/life_lens",
-  },
-];
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+};
 
 export function ProjectsSection() {
   return (
@@ -73,18 +26,18 @@ export function ProjectsSection() {
         Projects
       </motion.h3>
 
-
-
-      {/* Grid */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {/* Featured project taking 2 columns */}
+      <motion.div
+        className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+      >
+        {/* Featured project spanning 2 columns */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.1 }}
+          variants={cardVariants}
           onClick={() => window.open(featuredProject.live, "_blank", "noopener,noreferrer")}
-          className="sm:col-span-2 bg-card rounded-lg p-6 sm:p-8 border border-border hover:border-primary/30 transition-colors duration-200 flex flex-col cursor-pointer"
+          className="sm:col-span-2 bg-card rounded-lg p-6 sm:p-8 border border-border hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-200 flex flex-col cursor-pointer"
         >
           <p className="font-mono text-primary text-xs mb-2">Featured Project</p>
           <h4 className="text-foreground text-xl font-semibold mb-3">
@@ -109,15 +62,13 @@ export function ProjectsSection() {
             </a>
           </div>
         </motion.div>
-        {projects.map((project, i) => (
+
+        {projects.map((project) => (
           <motion.div
             key={project.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.1 + i * 0.1 }}
+            variants={cardVariants}
             onClick={() => project.live && window.open(project.live, "_blank", "noopener,noreferrer")}
-            className={`bg-card rounded-lg p-6 border border-border hover:border-primary/30 hover:-translate-y-1 transition-all duration-200 flex flex-col ${project.live ? "cursor-pointer" : ""}`}
+            className={`bg-card rounded-lg p-6 border border-border hover:border-primary/30 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 transition-all duration-200 flex flex-col ${project.live ? "cursor-pointer" : ""}`}
           >
             <div className="flex items-center justify-between mb-6">
               <Folder className="text-primary" size={36} strokeWidth={1} />
@@ -154,7 +105,7 @@ export function ProjectsSection() {
             </div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

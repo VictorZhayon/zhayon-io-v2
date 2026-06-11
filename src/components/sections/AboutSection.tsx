@@ -64,6 +64,7 @@ export function AboutSection() {
               <img
                 src={profileImg}
                 alt="Victor Zion"
+                loading="lazy"
                 className="w-full h-full object-cover rounded" />
               
               <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-200 rounded" />

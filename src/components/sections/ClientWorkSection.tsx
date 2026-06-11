@@ -1,24 +1,16 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Globe } from "lucide-react";
+import { clients } from "@/constants/data";
 
-const clients = [
-  {
-    title: "Laptop Doctor",
-    description:
-      "Business site for a full-service laptop shop — covering sales, expert repairs, genuine accessories, professional software installation, and premium laptop skins.",
-    live: "https://laptopdoctor.netlify.app/",
-  },
-  {
-    title: "EsterOfWeb3",
-    description: "Personal portfolio website for EsterOfWeb3, a Web3 professional.",
-    live: "https://esterofweb3.netlify.app/",
-  },
-  {
-    title: "Praise Oton",
-    description: "Personal portfolio website for Praise Oton, a Data Engineer.",
-    live: "https://victorzhayon.github.io/praise-oton/",
-  },
-];
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+};
 
 export function ClientWorkSection() {
   return (
@@ -34,16 +26,19 @@ export function ClientWorkSection() {
         Client Work
       </motion.h3>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {clients.map((client, i) => (
+      <motion.div
+        className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+      >
+        {clients.map((client) => (
           <motion.div
             key={client.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.1 + i * 0.1 }}
+            variants={cardVariants}
             onClick={() => window.open(client.live, "_blank", "noopener,noreferrer")}
-            className="bg-card rounded-lg p-6 border border-border hover:border-primary/30 hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer"
+            className="bg-card rounded-lg p-6 border border-border hover:border-primary/30 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 transition-all duration-200 flex flex-col cursor-pointer"
           >
             <div className="flex items-center justify-between mb-6">
               <Globe className="text-primary" size={36} strokeWidth={1} />
@@ -66,7 +61,7 @@ export function ClientWorkSection() {
             <p className="font-mono text-xs text-primary mt-4">Client Project</p>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
