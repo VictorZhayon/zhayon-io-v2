@@ -42,7 +42,8 @@ export function ClientWorkSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.1 + i * 0.1 }}
-            className="bg-card rounded-lg p-6 border border-border hover:border-primary/30 hover:-translate-y-1 transition-all duration-200 flex flex-col"
+            onClick={() => window.open(client.live, "_blank", "noopener,noreferrer")}
+            className="bg-card rounded-lg p-6 border border-border hover:border-primary/30 hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer"
           >
             <div className="flex items-center justify-between mb-6">
               <Globe className="text-primary" size={36} strokeWidth={1} />
@@ -50,6 +51,7 @@ export function ClientWorkSection() {
                 href={client.live}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <ExternalLink size={18} />

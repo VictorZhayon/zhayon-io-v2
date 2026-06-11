@@ -83,7 +83,8 @@ export function ProjectsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.1 }}
-          className="sm:col-span-2 bg-card rounded-lg p-6 sm:p-8 border border-border hover:border-primary/30 transition-colors duration-200 flex flex-col"
+          onClick={() => window.open(featuredProject.live, "_blank", "noopener,noreferrer")}
+          className="sm:col-span-2 bg-card rounded-lg p-6 sm:p-8 border border-border hover:border-primary/30 transition-colors duration-200 flex flex-col cursor-pointer"
         >
           <p className="font-mono text-primary text-xs mb-2">Featured Project</p>
           <h4 className="text-foreground text-xl font-semibold mb-3">
@@ -100,10 +101,10 @@ export function ProjectsSection() {
             ))}
           </div>
           <div className="flex gap-4 mt-auto">
-            <a href={featuredProject.github} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
+            <a href={featuredProject.github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="text-foreground hover:text-primary transition-colors">
               <Github size={20} />
             </a>
-            <a href={featuredProject.live} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
+            <a href={featuredProject.live} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="text-foreground hover:text-primary transition-colors">
               <ExternalLink size={20} />
             </a>
           </div>
@@ -115,7 +116,8 @@ export function ProjectsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.1 + i * 0.1 }}
-            className="bg-card rounded-lg p-6 border border-border hover:border-primary/30 hover:-translate-y-1 transition-all duration-200 flex flex-col"
+            onClick={() => project.live && window.open(project.live, "_blank", "noopener,noreferrer")}
+            className={`bg-card rounded-lg p-6 border border-border hover:border-primary/30 hover:-translate-y-1 transition-all duration-200 flex flex-col ${project.live ? "cursor-pointer" : ""}`}
           >
             <div className="flex items-center justify-between mb-6">
               <Folder className="text-primary" size={36} strokeWidth={1} />
@@ -126,12 +128,12 @@ export function ProjectsSection() {
                   </span>
                 )}
                 {!project.comingSoon && project.github && (
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="text-muted-foreground hover:text-primary transition-colors">
                     <Github size={18} />
                   </a>
                 )}
                 {!project.comingSoon && project.live && (
-                  <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <a href={project.live} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="text-muted-foreground hover:text-primary transition-colors">
                     <ExternalLink size={18} />
                   </a>
                 )}
