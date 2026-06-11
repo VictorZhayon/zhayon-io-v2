@@ -167,8 +167,8 @@ export const clients = [
 ];
 
 export const stats = [
-  { value: 3, suffix: "+", label: "Years in Tech" },
+  { value: 7, suffix: "+", label: "Years in Tech" },
+  { value: 4, suffix: "+", label: "Years Professional" },
   { value: 10, suffix: "+", label: "Projects Built" },
-  { value: 5, suffix: "", label: "Companies Served" },
   { value: 15, suffix: "+", label: "Technologies Used" },
 ];
