@@ -15,7 +15,7 @@ export function HeroSection() {
 
   return (
     <section className="min-h-screen flex flex-col justify-center py-20">
-      <h1 className="sr-only">Victor Zion — Software Engineer & Technical Writer</h1>
+      <h1 className="sr-only">Victor Zion — Software Engineer | Technical Writer</h1>
 
       <motion.p
         initial={{ opacity: 0, y: 20 }}
@@ -47,14 +47,14 @@ export function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.3 }}
         className="text-muted-foreground text-base sm:text-lg max-w-xl mb-12">
-        AI/ML Engineer · Backend Engineer · Technical Writer · Tech Career Advisor
+        AI Engineer · Backend Engineer · Technical Writer · Tech Career Advisor
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.4 }}>
         <a
-          href="/Victor-Zion-CV-updated.pdf"
+          href="/Victor_Zion_CV.pdf"
           download
           className="inline-flex items-center gap-2 border border-primary text-primary px-7 py-4 rounded font-mono text-sm hover:bg-primary/10 transition-colors duration-200">
           <Download size={15} />

@@ -23,12 +23,12 @@ export const socialLinks = [
 export const technologies = [
   "Python",
   "JavaScript",
-  "Markdown/Markdown React",
-  "Mintlify",
-  "FastAPI/Flask",
-  "Node.js",
-  "TypeScript",
-  "MongoDB",
+  "FastAPI",
+  "LangGraph / RAG",
+  "Mintlify / MDX",
+  "Supabase",
+  "Google Gemini API",
+  "Dart",
 ];
 
 export const experiences = [
@@ -56,7 +56,7 @@ export const experiences = [
   },
   {
     company: "Elora",
-    title: "AI Engineer/ Technical Researcher",
+    title: "LLM Engineer / Technical Writer",
     period: "Aug 2025 — Present",
     tech: ["Python", "TensorFlow", "FastAPI", "Docker"],
     bullets: [
@@ -79,7 +79,7 @@ export const experiences = [
   {
     company: "Wedigraf Technologies",
     title: "Flutter Developer - Intern",
-    period: "Jan 2023 — Jun 2023",
+    period: "Jan 2022 — Jun 2022",
     tech: ["Flutter", "Dart", "Firebase", "REST APIs"],
     bullets: [
       "Co-led a team of 5 in developing a cross-platform mobile application using Flutter",
@@ -167,7 +167,7 @@ export const clients = [
 ];
 
 export const stats = [
-  { value: 7, suffix: "+", label: "Years in Tech" },
+  { value: 8, suffix: "+", label: "Years in Tech" },
   { value: 4, suffix: "+", label: "Years Professional" },
   { value: 10, suffix: "+", label: "Projects Built" },
   { value: 15, suffix: "+", label: "Technologies Used" },
