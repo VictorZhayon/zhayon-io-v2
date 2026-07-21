@@ -7,6 +7,8 @@ import { CommandPalette } from "@/components/CommandPalette";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
+import { Analytics } from "@vercel/analytics/react";
+
 const App = () => (
   <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
     <TooltipProvider>
@@ -20,6 +22,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <Analytics />
     </TooltipProvider>
   </ThemeProvider>
 );
