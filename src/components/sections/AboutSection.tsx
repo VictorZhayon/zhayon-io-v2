@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import profileImg from "@/assets/profile.png";
+import { ScrambleText } from "@/components/ScrambleText";
 
 export function AboutSection() {
   return (
@@ -12,7 +13,7 @@ export function AboutSection() {
         className="section-heading"
         data-num="01.">
         
-        About Me
+        <ScrambleText text="About Me" />
       </motion.h3>
 
       <div className="grid md:grid-cols-[3fr_2fr] gap-12 items-start">

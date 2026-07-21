@@ -1,4 +1,4 @@
-import { BookOpen, Menu, X as XIcon, Sun, Moon } from "lucide-react";
+import { BookOpen, Menu, X as XIcon, Sun, Moon, FileJson, FileCode, FileText, Terminal } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
 import { navLinks, socialLinks } from "@/constants/data";
@@ -28,6 +28,27 @@ const iconMap: Record<string, React.ComponentType<{ size?: number | string }>> =
   Medium: BookOpen,
 };
 
+// IDE extensions for links
+const getNavIcon = (label: string) => {
+  switch (label.toLowerCase()) {
+    case 'about': return <FileText size={16} className="text-blue-400" />;
+    case 'experience': return <Terminal size={16} className="text-green-400" />;
+    case 'projects': return <FileCode size={16} className="text-yellow-400" />;
+    case 'client work': return <FileJson size={16} className="text-purple-400" />;
+    default: return <FileText size={16} />;
+  }
+};
+
+const getNavExtension = (label: string) => {
+  switch (label.toLowerCase()) {
+    case 'about': return '.md';
+    case 'experience': return '.sh';
+    case 'projects': return '.ts';
+    case 'client work': return '.json';
+    default: return '.txt';
+  }
+};
+
 function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -55,7 +76,6 @@ export function FixedSidebar() {
     const handleScroll = () => {
       const current = window.scrollY;
 
-      // Hide header on scroll down, show on scroll up
       if (current > lastScrollY.current + 5 && current > 100) {
         setHeaderVisible(false);
       } else if (current < lastScrollY.current - 5) {
@@ -63,7 +83,6 @@ export function FixedSidebar() {
       }
       lastScrollY.current = current;
 
-      // Active section tracking
       const scrollY = current + window.innerHeight * 0.3;
       let active = "";
       for (const id of sectionIds) {
@@ -91,8 +110,8 @@ export function FixedSidebar() {
           headerVisible || mobileOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <a href="#" className="text-foreground font-bold text-lg">
-          V<span className="text-primary">Z</span>
+        <a href="#" className="text-foreground font-bold text-lg font-mono">
+          victor<span className="text-primary">@</span>zhayon
         </a>
         <div className="flex items-center gap-4">
           <ThemeToggle />
@@ -110,22 +129,28 @@ export function FixedSidebar() {
       {/* Mobile menu overlay */}
       {mobileOpen && (
         <div className="lg:hidden fixed inset-0 z-40 bg-background/95 backdrop-blur-md flex flex-col items-center justify-center gap-6">
-          {navLinks.map((link) => (
-            <button
-              key={link.href}
-              onClick={() => handleNavClick(link.href)}
-              className="text-foreground hover:text-primary transition-colors text-lg"
+          <div className="flex flex-col gap-4 font-mono w-full max-w-xs">
+            <div className="text-xs text-muted-foreground mb-2">EXPLORER</div>
+            {navLinks.map((link) => (
+              <button
+                key={link.href}
+                onClick={() => handleNavClick(link.href)}
+                className="flex items-center gap-3 text-foreground hover:text-primary transition-colors text-lg"
+              >
+                {getNavIcon(link.label)}
+                <span>
+                  {link.label.toLowerCase().replace(' ', '_')}{getNavExtension(link.label)}
+                </span>
+              </button>
+            ))}
+            <a
+              href="/Victor_Zion_CV.pdf"
+              download
+              className="mt-8 border border-primary text-primary px-6 py-3 rounded font-mono text-sm hover:bg-primary/10 transition-colors text-center"
             >
-              <span className="font-mono text-primary text-sm mr-2">{link.num}.</span>
-              {link.label}
-            </button>
-          ))}
-          <a
-            href="/Victor-Zion-CV-updated.pdf"
-            className="mt-4 border border-primary text-primary px-6 py-2 rounded font-mono text-sm hover:bg-primary/10 transition-colors"
-          >
-            Resume
-          </a>
+              download_resume.sh
+            </a>
+          </div>
         </div>
       )}
 
@@ -133,42 +158,45 @@ export function FixedSidebar() {
       <aside className="hidden lg:flex fixed left-0 top-0 bottom-0 w-[35%] max-w-[480px] flex-col justify-between p-12 xl:p-16 z-30">
         <div>
           <a href="#" className="block mb-2">
-            <p className="text-foreground text-4xl font-bold tracking-tight xl:text-6xl">
-              Victor Zion
+            <p className="text-foreground text-4xl font-bold tracking-tight xl:text-5xl font-mono">
+              Victor<span className="text-primary">_</span>Zion
             </p>
           </a>
-          <p className="text-foreground text-lg font-medium mt-2">
-            Software Engineer | Technical Writer
+          <p className="text-foreground text-lg font-medium mt-4 font-mono">
+            {'<SoftwareEngineer />'}
           </p>
-          <p className="text-muted-foreground text-sm mt-1 max-w-[280px]">
-            I build intelligent systems and write about technology with clarity and intent.
+          <p className="text-muted-foreground text-sm mt-3 max-w-[280px]">
+            Building intelligent systems and writing about technology with clarity and intent.
           </p>
 
-          <nav className="mt-12 flex flex-col gap-3" aria-label="Page sections">
-            {navLinks.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => handleNavClick(link.href)}
-                aria-current={activeSection === link.href.replace("#", "") ? "true" : undefined}
-                className={`group flex items-center gap-3 transition-all duration-200 text-sm ${
-                  activeSection === link.href.replace("#", "")
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                <span
-                  className={`h-px transition-all duration-200 ${
-                    activeSection === link.href.replace("#", "")
-                      ? "w-12 bg-primary"
-                      : "w-6 bg-muted-foreground group-hover:w-12 group-hover:bg-foreground"
-                  }`}
-                />
-                <span className="uppercase tracking-widest text-xs font-medium">
-                  {link.label}
-                </span>
-              </button>
-            ))}
-          </nav>
+          <div className="mt-12">
+            <div className="text-xs font-mono text-muted-foreground mb-4 uppercase tracking-wider">Explorer &gt; Portfolio</div>
+            <nav className="flex flex-col gap-1" aria-label="Page sections">
+              {navLinks.map((link) => {
+                const isActive = activeSection === link.href.replace("#", "");
+                return (
+                  <button
+                    key={link.href}
+                    onClick={() => handleNavClick(link.href)}
+                    aria-current={isActive ? "true" : undefined}
+                    className={`group flex items-center gap-3 px-3 py-2 rounded-md transition-all duration-200 font-mono text-sm ${
+                      isActive
+                        ? "bg-primary/10 text-primary"
+                        : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                    }`}
+                  >
+                    {getNavIcon(link.label)}
+                    <span>
+                      {link.label.toLowerCase().replace(' ', '_')}{getNavExtension(link.label)}
+                    </span>
+                  </button>
+                );
+              })}
+            </nav>
+            <div className="mt-8 text-xs font-mono text-muted-foreground flex items-center gap-2">
+              <kbd className="px-2 py-1 bg-muted rounded border border-border">Cmd</kbd> + <kbd className="px-2 py-1 bg-muted rounded border border-border">K</kbd> to open command palette
+            </div>
+          </div>
         </div>
 
         <div className="flex items-center gap-5">
