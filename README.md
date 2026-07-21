@@ -1,73 +1,61 @@
-# Welcome to your Lovable project
+# Zhayon.io V2
 
-## Project info
+Welcome to **Zhayon.io V2**, my personal portfolio and professional hub. This project showcases my recent work, skills, and professional experience, built with modern web technologies for a smooth, interactive user experience.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Features
 
-## How can I edit this code?
+- **Interactive UI**: A sleek, modern design with smooth animations powered by Framer Motion.
+- **Project Showcase**: Detailed project card previews to explore my latest work.
+- **Command Palette**: Quick navigation and actions via a powerful command palette.
+- **CV Preview**: Integrated modal to preview and download my professional CV.
+- **Legacy Access**: Easy navigation back to the [V1 website](https://zhayon-io.vercel.app).
+- **Responsive Design**: A fully responsive layout with a fixed sidebar for desktop and accessible mobile navigation.
 
-There are several ways of editing your application.
+## Technologies Used
 
-**Use Lovable**
+This project is built with a robust, modern tech stack:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- **Framework**: [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Components**: [shadcn/ui](https://ui.shadcn.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Analytics**: Vercel Analytics
 
-Changes made via Lovable will be committed automatically to this repo.
+## Getting Started
 
-**Use your preferred IDE**
+To run this project locally, follow these steps:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js & npm installed (recommend using nvm)
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. Clone the repository:
+   ```sh
+   git clone <YOUR_GIT_URL>
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Navigate to the project directory:
+   ```sh
+   cd zhayon-io-v2
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. Install the dependencies:
+   ```sh
+   npm install
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+4. Start the development server:
+   ```sh
+   npm run dev
+   ```
 
-**Edit a file directly in GitHub**
+## Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+This project is configured for deployment on platforms like Vercel. Push changes to the repository to trigger a production build.
 
-**Use GitHub Codespaces**
+## Legacy Version
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The previous iteration of my portfolio can be found here: [Zhayon.io V1](https://zhayon-io.vercel.app).
