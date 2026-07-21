@@ -2,6 +2,7 @@ import { BookOpen, Menu, X as XIcon, Sun, Moon, FileJson, FileCode, FileText, Te
 import { useState, useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
 import { navLinks, socialLinks } from "@/constants/data";
+import { CVPreviewModal } from "@/components/CVPreviewModal";
 
 const GithubIcon = ({ size = 20 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
@@ -69,6 +70,7 @@ export function FixedSidebar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [headerVisible, setHeaderVisible] = useState(true);
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
@@ -143,13 +145,15 @@ export function FixedSidebar() {
                 </span>
               </button>
             ))}
-            <a
-              href="/Victor_Zion_CV.pdf"
-              download
+            <button
+              onClick={() => {
+                setMobileOpen(false);
+                setIsPreviewOpen(true);
+              }}
               className="mt-8 border border-primary text-primary px-6 py-3 rounded font-mono text-sm hover:bg-primary/10 transition-colors text-center"
             >
               download_resume.sh
-            </a>
+            </button>
           </div>
         </div>
       )}
@@ -218,6 +222,11 @@ export function FixedSidebar() {
           <ThemeToggle />
         </div>
       </aside>
+
+      <CVPreviewModal
+        isOpen={isPreviewOpen}
+        onClose={() => setIsPreviewOpen(false)}
+      />
     </>
   );
 }
