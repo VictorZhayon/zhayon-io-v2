@@ -154,6 +154,15 @@ export function FixedSidebar() {
             >
               download_resume.sh
             </button>
+            <a
+              href="https://zhayon-io.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 border border-border text-muted-foreground px-6 py-3 rounded font-mono text-sm hover:bg-muted transition-colors text-center flex items-center justify-center gap-2"
+            >
+              <Terminal size={16} />
+              cd ../v1
+            </a>
           </div>
         </div>
       )}
@@ -199,6 +208,17 @@ export function FixedSidebar() {
             </nav>
             <div className="mt-8 text-xs font-mono text-muted-foreground flex items-center gap-2">
               <kbd className="px-2 py-1 bg-muted rounded border border-border">Cmd</kbd> + <kbd className="px-2 py-1 bg-muted rounded border border-border">K</kbd> to open command palette
+            </div>
+            <div className="mt-4 text-xs font-mono text-muted-foreground flex items-center">
+              <a 
+                href="https://zhayon-io.vercel.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-primary transition-colors duration-200"
+              >
+                <Terminal size={14} />
+                <span>cd ../v1</span>
+              </a>
             </div>
           </div>
         </div>
